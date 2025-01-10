@@ -49,3 +49,14 @@ The system also includes **request logging** using middleware to track all inter
     "status": "valid",
     "location": "الدقهلية"
 }
+
+
+
+## Installation
+
+python -m venv env
+. env\bin\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
