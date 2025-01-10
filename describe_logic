@@ -1,0 +1,20 @@
+1-create a class that validates Egyptian National ID numbers. The Egyptian National ID is a 14-digit number that contains specific information about the individual, such as birth date, governorate code, and gender. The class will ensure that the ID number follows the official format and rules set by the Egyptian government.
+- The goal is to integrate the NationalIDValidator class into an API endpoint. This API will accept a national ID number from the user, validate it using the class, and return a response indicating whether the ID is valid or not.
+- but  i thought to create an optimized system for validating Egyptian National ID numbers by first checking if the ID exists in a database. If the ID is found in the database, it is immediately considered valid, saving time and computational resources. If the ID is not found, the system will use the NationalIDValidator class to validate it. Valid IDs will then be stored in the database for future use, making subsequent lookups faster.
+- Implement Request Logging for Tracking Client Operations
+To track and log every request made to the API endpoint in order to monitor client interactions, analyze system performance, and debug issues effectively.
+
+middleware logs every request to the /validate-national-id/ endpoint, ensuring that all interactions are tracked. It works for both versions of the application:
+
+Database Version: Logs requests to the database.
+
+API View Version: Logs requests to a file.
+
+Why Middleware?
+
+Reusability: The same middleware works for both versions, avoiding code duplication.
+
+Centralized Logic: All logging is handled in one place, making the code cleaner and easier to maintain.
+
+Flexibility: Easy to extend or modify logging behavior without changing the core logic of the application.
+
