@@ -28,9 +28,3 @@ class NationalIDLoggingMiddleware:
         else:
             return self.get_response(request)
 
-    def _get_response_data(self, response):
-        try:
-            return json.loads(response.content.decode('utf-8'))
-        except json.JSONDecodeError:
-            return {}
-
