@@ -1,0 +1,7 @@
+# Ignore virtual environment directories
+env/
+.env/
+
+# Optionally, ignore files named `.env` used for environment variables
+.env
+
