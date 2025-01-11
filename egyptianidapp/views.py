@@ -16,6 +16,7 @@ class NationalIDViewSet(viewsets.ModelViewSet):
     serializer_class = NationalIDSerializer
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     permission_classes = [HasAPIKey]
+    http_method_names = ['post']
 
     def create(self, request, *args, **kwargs):
         number = request.data.get("number")
